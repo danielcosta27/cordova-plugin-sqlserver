@@ -4,6 +4,7 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.LOG;
 import org.apache.cordova.PluginResult;
 import org.json.JSONObject;
 import org.json.JSONArray;
@@ -81,6 +82,8 @@ public class SqlServer extends CordovaPlugin {
         password = args.getString(3);
         database = args.getString(4);
 
+        LOG.v(TAG, "Calling init()");
+
         PluginResult result = new PluginResult(PluginResult.Status.OK, "Plugin initialized");
 
         if (server == null || "".equals(server)) {
@@ -103,12 +106,17 @@ public class SqlServer extends CordovaPlugin {
             result = new PluginResult(PluginResult.Status.ERROR, "Parameter database missing or invalid");
         }
         try {
+            LOG.v(TAG, "Will check class existence");
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
+            LOG.v(TAG, "Class exists");
         } catch (ClassNotFoundException ex) {
+            LOG.v(TAG, "Error on class - not found");
             result = new PluginResult(PluginResult.Status.ERROR, ex.getMessage());
         }
 
+        LOG.v(TAG, "Calling callback");
         callbackContext.sendPluginResult(result);
+        LOG.v(TAG, "Callback called");
     }
 
     private void testConnection(JSONArray args, final CallbackContext callbackContext) throws JSONException {
