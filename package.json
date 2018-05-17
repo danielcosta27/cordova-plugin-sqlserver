@@ -1,13 +1,36 @@
 {
-  "name": "cordova-plugin-sqlserver",
-  "version": "1.0.0",
+  "_from": "git+https://github.com/cocodinTech/cordova-plugin-sqlserver.git",
+  "_id": "cordova-plugin-sqlserver@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-aUKiUeh+vJOHoYw+IXik970zk5o=",
+  "_location": "/cordova-plugin-sqlserver",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/cocodinTech/cordova-plugin-sqlserver.git",
+    "rawSpec": "https://github.com/cocodinTech/cordova-plugin-sqlserver.git",
+    "saveSpec": "git+https://github.com/cocodinTech/cordova-plugin-sqlserver.git",
+    "fetchSpec": "https://github.com/cocodinTech/cordova-plugin-sqlserver.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/cocodinTech/cordova-plugin-sqlserver.git#388ff26859237031f99ccecbb6483d5ba1a33638",
+  "_spec": "https://github.com/cocodinTech/cordova-plugin-sqlserver.git",
+  "_where": "/Users/daniel/fontes/data-eagle-ionic",
+  "bundleDependencies": false,
   "cordova": {
     "id": "cordova-plugin-sqlserver"
   },
+  "deprecated": false,
   "description": "Access to SQL Server database directly without any service",
   "keywords": [
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios"
-  ]
+  ],
+  "name": "cordova-plugin-sqlserver",
+  "version": "1.0.0"
 }

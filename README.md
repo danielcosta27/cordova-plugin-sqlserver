@@ -6,7 +6,7 @@ The purpose of this plugin is to avoid using services to access data directly.
 
 It can be used on Cordova, PhoneGap and Ionic.
 
-This version is compatible with iOS and Android platforms.
+This version is compatible with iOS and Android platforms 
 
 # Instalation
 
@@ -19,17 +19,17 @@ cordova plugin add /path/to/folder/sqlserver-plugin
   It is also possible to install via repo url directly
   
 ```
-cordova plugin add https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git
+cordova plugin add https://github.com/danielcosta27/cordova-plugin-sqlserver.git (Install this fork)
 ```
 
-To install directly from NPM visit https://www.npmjs.com/package/cordova-plugin-sqlserver
+To install directly from NPM visit https://www.npmjs.com/package/cordova-plugin-sqlserver (Install original project)
 
 # How to use it
 
-  After add the plugin just intialize it with database parameters server, instance, username, password, database name. For example:
+  After add the plugin just intialize it with database parameters server, instance (could be empty "" ), username, password, database name. For example:
 
 ```javascript
-SqlServer.init("192.168.0.120", "SQLEXPRESS", "sa", "01234567", "dinademo", function(event) {
+SqlServer.init("192.168.0.120:1433", "SQLEXPRESS", "sa", "01234567", "dinademo", function(event) {
   alert(JSON.stringify(event));
 }, function(error) {
   alert(JSON.stringify(error));
@@ -129,13 +129,9 @@ SqlServer.executeQuery("select * from test_table where test_code=1", function(ev
 # How to Contribute
 
 Contributors are welcome! And we need your contributions to keep the project moving forward. 
-You can report bugs to sdossantos@y3k-it.com or contribute with code.
+You can report bugs to daniel@icarustech.com.br or contribute with code.
 
 # Credits
 
-* SQLCliente for Xcode https://github.com/martinrybak/SQLClient
+* SQLClient for Xcode https://github.com/martinrybak/SQLClient
 
-# For more information about us visit
-
-* QREventos http://www.qreventos.com
-* Y3K-it http://www.y3k-it.com
